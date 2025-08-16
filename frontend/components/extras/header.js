@@ -1,4 +1,4 @@
-// components/Header.js
+import Link from 'next/link';
 export default function Header() {
   return (
     <header
@@ -16,24 +16,26 @@ export default function Header() {
         Log Analyzer
       </h1>
       <nav>
-        <a
-          href="#dashboard"
+        <Link
+          href="/dashboard"
           style={{ color: 'white', marginRight: '1.5rem', textDecoration: 'none', fontWeight: '500' }}
         >
           Dashboard
-        </a>
-        <a
+        </Link>
+        <Link
           href="#reports"
           style={{ color: 'white', marginRight: '1.5rem', textDecoration: 'none', fontWeight: '500' }}
         >
           Reports
-        </a>
-        <a
+        </Link>
+
+        <Link
           href="#settings"
           style={{ color: 'white', textDecoration: 'none', fontWeight: '500' }}
         >
           Settings
-        </a>
+        </Link>
+
       </nav>
     </header>
   );

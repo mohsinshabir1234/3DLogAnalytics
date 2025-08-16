@@ -33,7 +33,6 @@ export default function Home() {
       supabase.auth.signOut();
       setSession(null);
     }}
- 
   >
     Sign Out
   </button>
