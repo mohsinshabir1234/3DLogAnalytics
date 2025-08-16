@@ -1,0 +1,41 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    volumes:
+      - /tmp/uploads:/tmp/uploads
+
+  worker:
+    image: node:20-alpine
+    working_dir: /app
+    command: node backend/worker/worker.js
+    env_file: .env
+    volumes:
+      - .:/app
+      - /temp/uploads:/temp/uploads
+    depends_on:
+      - redis
+
+  ws:
+    image: node:20-alpine
+    working_dir: /app
+    command: node -e "import('./backend/websocket/hub.js').then(m=>m.getWSS())"
+    env_file: .env
+    volumes:
+      - .:/app
+    ports:
+      - "3002:3002"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

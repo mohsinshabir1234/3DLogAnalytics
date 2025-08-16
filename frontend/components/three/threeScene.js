@@ -2,7 +2,7 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import DataLayer from "./layers/datalayer";
+import DataLayer from "./layers/dataLayer";
 
 export default function ThreeScene() {
   return (
