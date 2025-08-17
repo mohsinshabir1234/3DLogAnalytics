@@ -1,14 +1,14 @@
 FROM node:20-alpine
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache tree libc6-compat
 WORKDIR /app
 
 COPY frontend/package*.json ./frontend/
 WORKDIR /app/frontend
-RUN npm ci
+RUN npm ci 
 
 COPY frontend ./ 
-COPY supabase ../supabase
-
+COPY backend /app/backend
+RUN tree -L 2 /app
 RUN npm run build
 
 EXPOSE 3000

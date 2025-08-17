@@ -1,6 +1,6 @@
 // backend/worker/worker.js
 import { Worker, QueueEvents } from 'bullmq';
-import supabase from '../../supabase/supabaseClient.js';
+import supabase from '../../frontend/app/supabase/supabaseClient.js';
 import { parseFileFor3D } from './parser.js';
 import { getWSS, broadcast } from '../websocket/hub.js';
 

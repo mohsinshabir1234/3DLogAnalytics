@@ -17,7 +17,7 @@ export async function POST(req) {
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
 
-  const dir = process.env.UPLOAD_DIR || '/tmp/uploads';
+  const dir = process.env.UPLOAD_DIR || '/temp/uploads';
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
   const id = crypto.randomUUID();

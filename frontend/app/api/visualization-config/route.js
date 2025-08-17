@@ -1,6 +1,6 @@
 // frontend/app/api/visualization-config/route.js
 import { NextResponse } from 'next/server';
-import supabase from '../../../../supabase/supabaseClient.js';
+import supabase from '../../supabase/supabaseClient.js';
 
 // expects JSON: { user_id, config_name, camera_position, filter_settings, color_scheme, is_default }
 export async function POST(req) {

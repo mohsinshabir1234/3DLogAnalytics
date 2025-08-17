@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import LoginPage from '../components/authentication/loginPage';
 import Header from '../components/extras/header';
 import Footer from '../components/extras/footer';
-import supabase from '../../supabase/supabaseClient.js';
+import supabase from './supabase/supabaseClient.js';
 import FileUpload from './uploadPage/page.js';
 export default function Home() {
   const [session, setSession] = useState(null);

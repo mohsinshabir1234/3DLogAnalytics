@@ -1,6 +1,6 @@
 // frontend/app/api/stats/route.js
 import { NextResponse } from 'next/server';
-import supabase from '../../../../supabase/supabaseClient.js';
+import supabase from '../../supabase/supabaseClient.js';
 
 export async function GET() {
   const { data, error } = await supabase

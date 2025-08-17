@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import signUpFunction from '../../../supabase/signUpFunction.js';
+import signUpFunction from '../supabase/signUpFunction.js';
 import { useRouter } from "next/navigation";
 
 function SignupForm() {

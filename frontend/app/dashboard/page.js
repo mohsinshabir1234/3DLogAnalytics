@@ -5,7 +5,7 @@ import ThreeScene from "../../components/three/threeScene";
 import SceneOverlay from "../../components/three/sceneOverlay";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import supabase from "../../../supabase/supabaseClient";
+import supabase from "../supabase/supabaseClient";
 
 export default function DashboardPage() {
   const router = useRouter();

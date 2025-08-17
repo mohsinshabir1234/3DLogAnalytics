@@ -1,7 +1,7 @@
 // components/LoginPage.js
 "use client";
 import { useState } from 'react';
-import signIn from '../../../supabase/signInFunction.js'; // Adjust the import path as necessary
+import signIn from '../../app/supabase/signInFunction.js'; // Adjust the import path as necessary
 import { useRouter } from "next/navigation";
 export default function LoginPage() {
   const [email, setEmail] = useState('');

@@ -1,6 +1,6 @@
 // frontend/app/api/animation-frames/[jobId]/route.js
 import { NextResponse } from 'next/server';
-import supabase from '../../../../../supabase/supabaseClient.js';
+import supabase from '../../../supabase/supabaseClient.js';
 
 export async function GET(_req, { params }) {
   const { jobId } = params;
